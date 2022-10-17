@@ -1,0 +1,32 @@
+**************************************************
+*************** CREATING SAMPLES *****************
+**************************************************
+Object : C:/Users/Miguel/Desktop/HACKATON/Plantas
+Fixing file names in negative images folder.
+Fixing file names in positive images folder.
+Creating negative list C:/Users/Miguel/Desktop/HACKATON/Plantas/neg.lst
+Creating positive list C:/Users/Miguel/Desktop/HACKATON/Plantas/pos.lst
+Running : opencv_createsamples
+Info file name: C:\Users\Miguel\Desktop\HACKATON\Plantas\pos.lst
+Img file name: (NULL)
+Vec file name: C:\Users\Miguel\Desktop\HACKATON\Plantas\pos_samples.vec
+BG  file name: (NULL)
+Num: 8
+BG color: 0
+BG threshold: 80
+Invert: FALSE
+Max intensity deviation: 40
+Max x angle: 1.1
+Max y angle: 1.1
+Max z angle: 0.5
+Show samples: FALSE
+Width: 220
+Height: 220
+Max Scale: -1
+Create training samples from images collection...
+Done. Created 8 samples
+
+**************************************************
+************* TRAINING CLASSIFIER ****************
+**************************************************
+Running : opencv_traincascade

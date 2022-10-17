@@ -86,22 +86,6 @@ li {
 }
 
 
-main ul li {
-    display: -webkit-flex;
-    display: inline-flex;    
-}
-main ul li{
-    width: 20%;
-}
-
-main{
-    display: -webkit-flex;
-    display:flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-}
-
 main div img {
     width: 60%;
 }
@@ -136,3 +120,9 @@ main div{
     }
 }
 
+
+
+main ul{
+    display: inline-flex;
+}
+        
