@@ -31,6 +31,7 @@
                     <div class="motores">
                         <h2>Motor</h2>
                         <img src="imgWeb/activadores/motor.png" alt="Motor" id="imgmotor" />
+                        <button style="background-color:red; color:white" id="btnMotor">Boton</button>
                     </div>
                 </li>
                 <li>
@@ -45,6 +46,20 @@
     </div>
     <img class="tomate" src="imgWeb/home/fondo.png" />
     <img class="naranja" src="imgWeb/home/naranjafondo.png" />
+
+
+    <script>
+        let btnMotor=document.getElementById("btnMotor");
+        btnMotor.addEventListener ("click", ()=>{
+            if(btnMotor.style.backgroundColor==="red"){
+                btnMotor.style.backgroundColor="green";
+            }else{
+                btnMotor.style.backgroundColor="red";
+
+            }
+
+        });
+    </script>
 </body>
 
 </html>
