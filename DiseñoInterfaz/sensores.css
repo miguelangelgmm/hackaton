@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    background: #2A2B2A;
+    background: linear-gradient(90deg, #2A2B2A 0,#9CEBB3 58%);
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    margin: 2%;
+    width: 92%;
+    padding: 2%;
+    border-radius: 1rem;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+
+.card {
+
+    background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+.tomate {
+    position: absolute;
+    width: 20%;
+    top: 6%;
+    left: 2%;
+    z-index: -1;
+}
+
+.naranja {
+    position: absolute;
+    width: 20%;
+    top: 54%;
+    right: 2%;
+    z-index: -1;
+}
+
+/****************************************/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div{
+    display: flex;
+}
+nav ul{
+    display: flex;
+    gap:20px;
+    list-style-type: none;
+}
+nav ul li{
+
+    transition: transform 0.2s;
+    cursor: pointer;
+
+}
+
+nav ul li a{
+
+    padding: 10px;
+    color:black;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
+
+nav ul li a:hover{
+    background-color: white;
+    font-size: 1.6rem;
+    color:green;
+
+}
+
+li {
+    list-style: none;
+}
+
+
+main ul li {
+    display: -webkit-flex;
+    display: inline-flex;    
+}
+main ul li{
+    width: 20%;
+}
+
+main{
+    display: -webkit-flex;
+    display:flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+
+main div img {
+    width: 60%;
+}
+
+main div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    width: 90%;
+}
+
+.menu-grande{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    main ul li {
+        display: flex;    
+    }
+    main ul li{
+        width: 60%;
+    }
+    main div img {
+        width: 100%;
+    }
+    .menu-grande{
+        display: none;
+    }
+}
+
