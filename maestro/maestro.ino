@@ -19,7 +19,7 @@ int lecturaLuz = 0; //0-1023
 int sensorLluvia = A2;
 int lecturaLluvia = 0;//0-1023
 //Lista de datos separados por A
-//Temperatura,Humedad,HumedadTierra,                                                                                                                                                                                                                                                                                                                            
+//Temperatura,Humedad,HumedadTierra, Clima                                                                                                                                                                                                                                                                                                                            
 String datos = "A";
 
 void setup(){
