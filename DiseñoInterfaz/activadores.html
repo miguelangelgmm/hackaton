@@ -31,13 +31,14 @@
                     <div class="motores">
                         <h2>Motor</h2>
                         <img src="imgWeb/activadores/motor.png" alt="Motor" id="imgmotor" />
-                        <button style="background-color:red; color:white" id="btnMotor">Boton</button>
+                        <button style="background-color:red; color:white" id="btnMotor">Apagado</button>
                     </div>
                 </li>
                 <li>
                     <div class="clima">
                         <h2>Luces interiores</h2>
                         <img src="imgWeb/activadores/bombilla.png" />
+                        <button style="background-color:red; color:white" id="btnLuces">Apagado</button>
                     </div>
                 </li>
 
@@ -50,14 +51,24 @@
 
     <script>
         let btnMotor=document.getElementById("btnMotor");
+        let btnLuces=document.getElementById("btnLuces");
         btnMotor.addEventListener ("click", ()=>{
             if(btnMotor.style.backgroundColor==="red"){
                 btnMotor.style.backgroundColor="green";
+                btnMotor.innerHTML="Encendido";
             }else{
                 btnMotor.style.backgroundColor="red";
-
+                btnMotor.innerHTML="Apagado";
             }
-
+        });
+        btnLuces.addEventListener ("click", ()=>{
+            if(btnLuces.style.backgroundColor==="red"){
+                btnLuces.style.backgroundColor="green";
+                btnLuces.innerHTML="Encendido";
+            }else{
+                btnLuces.style.backgroundColor="red";
+                btnLuces.innerHTML="Apagado";
+            }
         });
     </script>
 </body>
