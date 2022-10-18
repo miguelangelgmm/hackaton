@@ -12,106 +12,138 @@
     <div class="card">
         <header>
             <div>
-                <img id="logo" src="imgWeb/logo.png" alt="logo" />
+              <a href="index.html"><img id="logo" src="imgWeb/logo.png" /></a>
             </div>
             <nav>
                 <ul class="menu-grande">
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="sensores.html">sensores</a></li>
-                    <li><a href="activadores.html">activadores</a></li>
-                    <li><a href="imagenes.html">imágenes</a></li>
-                    <li><a href="graficos.html">gráficas</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sensores.html">Sensores</a></li>
+                    <li><a href="activadores.html">Activadores</a></li>
+                    <li><a href="imagenes.html">Imágenes</a></li>
+                    <li><a href="graficos.html">Gráficos</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
             <div id="graf">
-                <canvas id="HumedadTierra"></canvas>
-                <canvas id="Clima"></canvas>
-                <canvas id="Temperatura"></canvas>
+              <div><canvas id="HumedadTierra"></canvas><br><br></div>
+              <div><canvas id="Temperatura"></canvas><br><br></div>
+              <div><canvas id="Humedad"></canvas><br><br></div>
+              <div><canvas id="Clima"></canvas><br><br></div>
             </div>              
             <script>
-                //Grafico de humedad de la tierra
-                const labels = [
-                  'Lunes',
-                  'Martes',
-                  'Miercoles',
-                  'Jueves',
-                  'Viernes',
-                  'Sabado',
-                  'Domingo',
-                ];
-              
-                const data = {
-                  labels: labels,
-                  datasets: [{
-                    label: 'Humedad de la tierra',
-                    backgroundColor: 'rgb(17, 0, 255)',
-                    borderColor: 'rgb(17, 0, 255)',
-                    data: [55, 60, 60, 75, 65, 55, 65],
-                  }]
+              //Grafico de humedad de la tierra
+              const labels = [
+                'Lunes',
+                'Martes',
+                'Miercoles',
+                'Jueves',
+                'Viernes',
+                'Sabado',
+                'Domingo',
+              ];
+            
+              const data = {
+                labels: labels,
+                datasets: [{
+                  label: 'Humedad de la tierra',
+                  backgroundColor: 'rgb(128, 64, 0)',
+                  borderColor: 'rgb(128, 64, 0)',
+                  data: [55, 60, 60, 75, 65, 55, 65],
+                }]
 
-                  
-                };
-              
-                const config = {
-                  type: 'line',
-                  data: data,
-                  options: {}
-                };
+                
+              };
+            
+              const config = {
+                type: 'line',
+                data: data,
+                options: {}
+              };
 
-                const HumedadTierra = new Chart(
-                document.getElementById('HumedadTierra'),
-                config
-                );
+              const HumedadTierra = new Chart(
+              document.getElementById('HumedadTierra'),
+              config
+              );
 
-                //grafico de clima              
-                const clima = {
-                  labels: labels,
+              //Grafico de clima              
+              const clima = {
+                  labels: [
+                    'Soleado',
+                    'LLuvia intensa',
+                    'Lluvia moderada',
+                    'Nublado',
+                  ],
                   datasets: [{
                     label: 'Clima',
-                    backgroundColor: 'rgb(255, 255, 255)',
-                    borderColor: 'rgb(255, 255, 255)',
-                    data: [55, 60, 60, 75, 65, 55, 65],
+                    data: [5, 2, 7, 3],
+                    backgroundColor: [
+                      'rgb(255, 252, 255)',
+                      'rgb(75, 192, 192)',
+                      'rgb(255, 205, 86)',
+                      'rgb(201, 203, 207)'
+                    ]
                   }]
-                };
-                const config2 = {
-                  type: 'line',
-                  data: clima,
-                  options: {}
-                };
+                  };
+                  const config2 = {
+                    type: 'polarArea',
+                    data: clima,
+                    options: {}
+                  };
+                  const Clima = new Chart(
+                    document.getElementById('Clima'),
+                    config2
+                  );
 
-                const Clima = new Chart(
-                document.getElementById('Clima'),
-                config2
-                );
+              //Grafico de temperatura
 
-                //grafico de temperatura
+              const temperatura = {
+                labels: labels,
+                datasets: [{
+                  label: 'Temperatura',
+                  backgroundColor: 'rgb(250,128,114)',
+                  borderColor: 'rgb(250,128,114)',
+                  data: [10, 25, 15, 31, 28, 35, 20],
+                }]
 
-                const temperatura = {
-                  labels: labels,
-                  datasets: [{
-                    label: 'Humedad de la tierra',
-                    backgroundColor: 'rgb(17, 0, 255)',
-                    borderColor: 'rgb(17, 0, 255)',
-                    data: [55, 60, 60, 75, 65, 55, 65],
-                  }]
+                
+              };
+            
+              const config3 = {
+                type: 'line',
+                data: temperatura,
+                options: {}
+              };
 
-                  
-                };
-              
-                const config3 = {
-                  type: 'line',
-                  data: temperatura,
-                  options: {}
-                };
+              const Temperatura = new Chart(
+              document.getElementById('Temperatura'),
+              config3
+              );
 
-                const Temperatura = new Chart(
-                document.getElementById('Temperatura'),
-                config3
-                );
+              //Grafico de humedad
+              const humedad = {
+                labels: labels,
+                datasets: [{
+                  label: 'Humedad',
+                  backgroundColor: 'rgb(17, 0, 255)',
+                  borderColor: 'rgb(17, 0, 255)',
+                  data: [55, 60, 60, 75, 65, 55, 65],
+                }]
 
+                
+              };
+            
+              const config4 = {
+                type: 'line',
+                data: humedad,
+                options: {}
+              };
+
+              const Humedad = new Chart(
+              document.getElementById('Humedad'),
+              config4
+              );
 
             </script>
         </main>
