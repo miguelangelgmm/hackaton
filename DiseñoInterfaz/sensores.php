@@ -24,7 +24,14 @@
 
     $query = $db->query($sql);
     while ($fila = $query->fetchArray()) {
+        $temperatura = $fila["temperatura"];
+        $humedad = $fila["humedad"];
+        $humedadTierra = $fila["humedadTierra"];
+        $clima = $fila["clima"];
+        $tiempo = $fila["tiempo"];
+    }
     ?>
+    
     <div class="card">
         <header>
             <div>
@@ -46,35 +53,35 @@
                     <div class="temperatura">
                         <h2>Temperatura</h2>
                         <img src="imgWeb/Sensores/termometro.png" alt="temperatura" />
-                        <p id="Temperatura-Text"><?php echo $fila["temperatura"]?><span>ºC</span></p>
+                        <p id="Temperatura-Text"><?php echo $temperatura?><span>ºC</span></p>
                     </div>
                 </li>
                 <li>
                     <div class="clima">
                         <h2>Clima</h2>
                         <img src="imgWeb/Sensores/clima.png" alt="clima" />
-                        <p id="clima-text"><?php echo $fila["clima"]?></p>
+                        <p id="clima-text"><?php echo $clima?></p>
                     </div>
                 </li>
                 <li>
                     <div class="humedad">
                         <h2>Humedad</h2>
                         <img src="imgWeb/Sensores/nube.png" alt="humedad" />
-                        <p id="humedad-text"><?php echo $fila["humedad"]?><span>%</span></p>
+                        <p id="humedad-text"><?php echo $humedad?><span>%</span></p>
                     </div>
                 </li>
                 <li>
                     <div class="viento">
                         <h2>Viento</h2>
                         <img src="imgWeb/Sensores/clima(1).png" alt="viento" />
-                        <p id="viento-text"><?php echo $fila["tiempo"]?><span>km/h</span></p>
+                        <p id="viento-text"><?php echo $tiempo?><span>km/h</span></p>
                     </div>
                 </li>
                 <li>
                     <div class="humedad-tierra">
                         <h2>Humedad de la Tierra</h2>
                         <img src="imgWeb/Sensores/planta.png" alt="humedad-tierra" />
-                        <p id="humedad-tierra-text"><?php echo $fila["humedadTierra"]?><span>%</span></p>
+                        <p id="humedad-tierra-text"><?php echo $humedadTierra ?><span>%</span></p>
                     </div>
                 </li>
             </ul>
@@ -83,9 +90,6 @@
     <img class="tomate" src="imgWeb/home/fondo.png" alt="tomate" />
     <img class="naranja" src="imgWeb/home/naranjafondo.png" alt="naranja" />
 
-    <?php
-    }
-    ?>
 </body>
 
 </html>
