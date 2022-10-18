@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <div>
+                <img id="logo" src="imgWeb/logo.png" alt="logo" />
+            </div>
+            <nav>
+                <ul class="menu-grande">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="sensores.html">sensores</a></li>
+                    <li><a href="activadores.html">activadores</a></li>
+                    <li><a href="imagenes.html">imágenes</a></li>
+                    <li><a href="graficos.html">gráficas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="graf">
+                <canvas id="HumedadTierra"></canvas>
+                <canvas id="Clima"></canvas>
+                <canvas id="Temperatura"></canvas>
+            </div>              
+            <script>
+                //Grafico de humedad de la tierra
+                const labels = [
+                  'Lunes',
+                  'Martes',
+                  'Miercoles',
+                  'Jueves',
+                  'Viernes',
+                  'Sabado',
+                  'Domingo',
+                ];
+              
+                const data = {
+                  labels: labels,
+                  datasets: [{
+                    label: 'Humedad de la tierra',
+                    backgroundColor: 'rgb(17, 0, 255)',
+                    borderColor: 'rgb(17, 0, 255)',
+                    data: [55, 60, 60, 75, 65, 55, 65],
+                  }]
+
+                  
+                };
+              
+                const config = {
+                  type: 'line',
+                  data: data,
+                  options: {}
+                };
+
+                const HumedadTierra = new Chart(
+                document.getElementById('HumedadTierra'),
+                config
+                );
+
+                //grafico de clima              
+                const clima = {
+                  labels: labels,
+                  datasets: [{
+                    label: 'Clima',
+                    backgroundColor: 'rgb(255, 255, 255)',
+                    borderColor: 'rgb(255, 255, 255)',
+                    data: [55, 60, 60, 75, 65, 55, 65],
+                  }]
+                };
+                const config2 = {
+                  type: 'line',
+                  data: clima,
+                  options: {}
+                };
+
+                const Clima = new Chart(
+                document.getElementById('Clima'),
+                config2
+                );
+
+                //grafico de temperatura
+
+                const temperatura = {
+                  labels: labels,
+                  datasets: [{
+                    label: 'Humedad de la tierra',
+                    backgroundColor: 'rgb(17, 0, 255)',
+                    borderColor: 'rgb(17, 0, 255)',
+                    data: [55, 60, 60, 75, 65, 55, 65],
+                  }]
+
+                  
+                };
+              
+                const config3 = {
+                  type: 'line',
+                  data: temperatura,
+                  options: {}
+                };
+
+                const Temperatura = new Chart(
+                document.getElementById('Temperatura'),
+                config3
+                );
+
+
+            </script>
+        </main>
+        <footer>
+            
+    </div>
+    <img class="tomate" src="imgWeb/home/fondo.png" alt="tomate" />
+    <img class="naranja" src="imgWeb/home/naranjafondo.png" alt="naranja" />
+</body>
+</html>
