@@ -66,7 +66,14 @@
                 <li>
                     <div class="humedad">
                         <h2>Humedad</h2>
-                        <img src="imgWeb/Sensores/nube.png" alt="humedad" />
+                        <?php 
+                        if ($humedad == "soleado"){
+                            echo '<img src="imgWeb/Sensores/sol.png" alt="soleado"/>';
+                        }
+                        if ($humedad == "nublado"){
+                            echo '<img src="imgWeb/Sensores/nube.png" alt="humedad"/>';
+                        }
+                        ?>  
                         <p id="humedad-text"><?php echo $humedad?><span>%</span></p>
                     </div>
                 </li>
