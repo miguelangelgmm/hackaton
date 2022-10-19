@@ -5,7 +5,7 @@ import time
 
 date = datetime.now()
 
-arduino = serial.Serial('COM6', 9600)
+arduino = serial.Serial('COM5', 9600)
 
 time.sleep(2)
 

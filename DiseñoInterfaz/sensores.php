@@ -43,7 +43,7 @@
                     <li><a>sensores</a></li>
                     <li><a href="activadores.html">activadores</a></li>
                     <li><a href="imagenes.html">imágenes</a></li>
-                    <li><a href="graficas">gráficas</a></li>
+                    <li><a href="graficos.html">Gráficos</a></li>
                 </ul>
             </nav>
         </header>
