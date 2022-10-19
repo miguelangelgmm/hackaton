@@ -59,21 +59,21 @@
                 <li>
                     <div class="clima">
                         <h2>Clima</h2>
-                        <img src="imgWeb/Sensores/clima.png" alt="clima" />
+                        <?php 
+                        if ($clima == "Soleado"){
+                            echo '<img src="imgWeb/Sensores/sol.png" alt="soleado"/>';
+                        }
+                        if ($clima == "Nublado"){
+                            echo '<img src="imgWeb/Sensores/clima.png" alt="humedad"/>';
+                        }
+                        ?>  
                         <p id="clima-text"><?php echo $clima?></p>
                     </div>
                 </li>
                 <li>
                     <div class="humedad">
                         <h2>Humedad</h2>
-                        <?php 
-                        if ($humedad == "soleado"){
-                            echo '<img src="imgWeb/Sensores/sol.png" alt="soleado"/>';
-                        }
-                        if ($humedad == "nublado"){
-                            echo '<img src="imgWeb/Sensores/nube.png" alt="humedad"/>';
-                        }
-                        ?>  
+                        <img src="imgWeb/Sensores/nube.png" alt="clima" />
                         <p id="humedad-text"><?php echo $humedad?><span>%</span></p>
                     </div>
                 </li>
