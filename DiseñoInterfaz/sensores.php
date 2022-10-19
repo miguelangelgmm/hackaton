@@ -74,7 +74,7 @@
                     <div class="viento">
                         <h2>Viento</h2>
                         <img src="imgWeb/Sensores/clima(1).png" alt="viento" />
-                        <p id="viento-text"><?php echo $tiempo?><span>km/h</span></p>
+                        <p id="viento-text"><span>0 km/h</span></p>
                     </div>
                 </li>
                 <li>
