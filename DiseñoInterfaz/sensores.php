@@ -39,10 +39,10 @@
             </div>
             <nav>
                 <ul class="menu-grande">
-                    <li><a href="index.html">home</a></li>
-                    <li><a>sensores</a></li>
-                    <li><a href="activadores.html">activadores</a></li>
-                    <li><a href="imagenes.html">imágenes</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a>Sensores</a></li>
+                    <li><a href="activadores.html">Activadores</a></li>
+                    <li><a href="imagenes.html">Imágenes</a></li>
                     <li><a href="graficos.html">Gráficos</a></li>
                 </ul>
             </nav>
